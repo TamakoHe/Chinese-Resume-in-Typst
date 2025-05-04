@@ -1,8 +1,8 @@
 // 字体
 #let font = (
-  main: "IBM Plex Serif",
-  mono: "IBM Plex Mono",
-  cjk: "Noto Serif CJK SC",
+  main: "Times New Roman",
+  mono: "JetBrains Mono",
+  cjk: "Source Han Serif SC",
 )
 
 // 图标
@@ -90,7 +90,7 @@
       gutter: (gutter-width, 0em),
       [#header #introduction],
       if photograph != "" {
-        image(photograph, width: photograph-width)
+        image(photograph, width: 8.4em)
       },
     )
   }
@@ -127,8 +127,8 @@
   color: black,
   ..infos,
 ) = {
-  set text(font: (font.mono, font.cjk), fill: color)
-  set par(justify: false)
+  set text(font: (font.mono, font.cjk), fill: color, )
+  set par(justify: false, leading: 0.5cm)
   infos
     .pos()
     .map(dir => {

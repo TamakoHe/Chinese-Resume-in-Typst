@@ -13,10 +13,11 @@
 #let fa-graduation-cap = icon("icons/fa-graduation-cap.svg")
 #let fa-linux = icon("icons/fa-linux.svg")
 #let fa-phone = icon("icons/fa-phone.svg")
+#let fa-apple=icon("icons/apple.svg")
 #let fa-windows = icon("icons/fa-windows.svg")
 #let fa-wrench = icon("icons/fa-wrench.svg")
 #let fa-work = icon("icons/fa-work.svg")
-
+#let fa-cet=icon("icons/r_cet.svg")
 // 设置简历选项与头部
 #show: resume.with(
   // 字体和基准大小
@@ -35,54 +36,48 @@
   //header-center: true,
 
   // 如果不需要头像，则将下面三行的参数注释或删除
-  photograph: "profile.jpg",
+  photograph: "2025-05-04-23-18-29.png",
   photograph-width: 10em,
   gutter-width: 2em,
 )[
-  = 某某
-
+  = 何文骁
+  #v(4em)
   #info(
     color: theme-color,
     (
       icon: fa-phone,
-      content: "(+86) 133-3333-3333",
+      content: "(+86) 15198020682",
     ),
     (
       icon: fa-building-columns,
-      content: "某某大学",
+      content: "电子科技大学",
     ),
     (
       icon: fa-graduation-cap,
-      content: "某某专业",
+      content: "电子信息工程",
     ),
     (
       icon: fa-envelope,
-      content: "liming@example.com",
-      link: "mailto:liming@example.com",
+      content: "stevehe6@gmail.com",
+      link: "mailto:stevehe6@gmail.com",
     ),
     (
       icon: fa-github,
-      content: "github.com/liming-dev",
-      link: "https://github.com/liming-dev",
+      content: "github.com/TamakoHe",
+      link: "https://github.com/TamakoHe",
     ),
   )
 ][
-  #h(2em)
 
-  *简历内容由 AI 生成，不代表真实内容。*作为一名计算机专业的学生，我专注于全栈开发和云计算技术。具有扎实的编程基础，热衷于开源项目贡献。在校期间参与多个实验室项目，对人工智能和分布式系统有深入研究。
 ]
-
-
 == #fa-graduation-cap 教育背景
 
 #sidebar(with-line: true, side-width: 12%)[
-  2024.06
-
-  2020.09
+  2022.09 至今 
 ][
-  *某某大学* · 某某学院 · 某某专业
+  *电子科技大学* · 格拉斯哥学院 · 电子信息工程
 
-  GPA: 5 / 5 · Rank: 0%
+  GPA: 3.73/4 (RANK 2023-2024:12%)
 ]
 
 
@@ -92,77 +87,88 @@
   *操作系统*
   
   *掌握*
-  
-  *熟悉*
 
   *了解*
 ][
-  #fa-linux Linux, #h(0.5em) #fa-windows Windows
+  #fa-linux Linux, #h(0.5em) #fa-windows Windows #h(0.5em) #fa-apple MacOs
   
-  React, JavaScript, Python
+  PyTorch，Latex，嵌入式开发, C++，Python
   
-  Vue, TypeScript, Node.js
+  
 
-  Webpack, Java
+  Java，前端开发，x86 汇编
 ]
 
 
 == #fa-award 获奖情况
 
 #item(
-  [ *互联网+ 大学生创新创业大赛* ],
-  [ *省级金奖* ],
-  date[ 2022 年 10 月 ],
+  [*电子设计大赛*],
+  [*三等奖*],
+  date[2022年11月],
 )
 
 #item(
-  [ *ACM-ICPC 区域赛* ],
-  [ *铜奖* ],
-  date[ 2021 年 12 月 ],
+  [*美国大学生数学建模竞赛*],
+  [*Meritorious Winner*],
+  date[2025年2月],
 )
-
+#item([*学业奖学金*],[*二等*], date([2024年九月]))
 
 == #fa-code 项目经历
 
 #item(
   link(
-    "https://github.com/liming-dev/cloud-platform",
-    [ *轻量级容器云平台* ],
+    "",
+    [*音游电子琴*],
   ),
-  [ *实验室项目* ],
-  date[ 2022 年 03 月 – 2022 年 12 月 ],
+  [*比赛项目*],
+  date[2022年11月],
 )
 
-#tech[ Golang, Docker, Kubernetes ]
+#tech[micropython,嵌入式,电路设计]
 
-基于 Kubernetes 的容器管理平台，提供Web界面的容器编排服务
+基于 esp32 芯片的音游电子琴
 
-- 设计实现了基于 RBAC 的多租户权限管理系统
-- 开发了容器资源动态伸缩和负载均衡模块
-- 使用 Prometheus 和 Grafana 构建监控告警系统
+-  使用多个 LED 和按键来控制系统, 加装放大器与喇叭用 PWM系统发出声音
+-  基于简单的并发技术实现了音游模式, 普通演奏模式的无缝切换和暂停重启功能
+
 
 #item(
   link(
-    "https://github.com/liming-dev/distributed-cache",
-    [ *分布式缓存系统* ],
+    "",
+    [*嵌入式手写计算器*],
   ),
   [ *个人项目* ],
-  date[ 2023 年 01 月 – 2023 年 04 月 ],
+  date[2023年11月],
 )
 
-#tech[ Golang, Redis, etcd ]
+#tech[嵌入式,C++,tensorflow,tinyML,Python]
 
-一个支持分布式部署的高性能缓存系统
+一个用 esp32 进行识别手写数字组成算式并进行运算的系统
 
-- 实现了一致性哈希算法进行数据分片
-- 采用 Raft 协议保证集群一致性
-- 支持缓存自动过期和 LRU 淘汰策略
-
-
-== #fa-building-columns 校园经历
-
+- 使用 tensorflow lite 把用MNIST 训练的神经网络模型部署到esp32上
+- 通过差样取值算法, 在有限内存的条件下提取图像特征
+- 支持带括号的浮点数四则运算
 #item(
-  [ *计算机学院学生科创中心主席* ],
-  [],
-  date[ 2022 年 09 月 – 2023 年 06 月 ],
+  link(
+    "https://github.com/TamakoHe/MY-Bird-Paper",
+    [*RT-DETR鸟类检测*],
+  ),
+  [*个人项目*],
+  date[2024年8月],
 )
+#tech[Python,PyTorch,labelme]
+一个基于 RT-DETR 和自建数据集的鸟类目标检测系统
+- 利用收集的 800 多张图片进行标记并转换为 COCO 格式
+- 提出了随机生成模拟树枝遮挡的算法
+- 改进损失函数, 使得更适合野生鸟类识别
+- 改进 FPN 层, 使得对鸟类特征提取能力增强
+- 新模型对鸟类的 ap50 有较明显的提升
+== #fa-cet 证书
+#text(size: 13pt)[#set align(left)
+#table(columns: 3, stroke: none)[CET-4][605分][2022年11月][CET-6][536分][2023年6月][机动车驾驶证][C证][2023年8月]]
+==  其他情况
+喜欢机器学习和模板编程。2024年2月，在新加坡国立大学人工智能游学活动中，承担组长工作，小组在考核中获得优秀。
+
+2024年参加由华中农业大学组织的观鸟营，多次参与成都市观鸟协会活动，观测并记录成都市猛禽活动情况，将收集的数据应用于RT-DETR鸟类检测项目，为保护鸟类做出自己的一点贡献。
